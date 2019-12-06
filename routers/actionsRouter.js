@@ -91,6 +91,8 @@ function validateAction(req, res, next) {
         res.status(400).json({ message: 'missing action data' })
     } else if (!actionData.description || !actionData.notes) {
         res.status(400).json({ message: 'missing required description and notes field' })
+    } else if (actionData.description && actionData.description.length > 128) {
+        res.status(400).json({ message: 'exceeded maximum description character limit of 128' })
     } else {
         next();
     }
