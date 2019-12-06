@@ -38,15 +38,21 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
-- [ ] Mention two parts of Express that you learned about this week.
+1.Mention two parts of Express that you learned about this week.
+    a)Express is to backend as React is to frontend -- basically a library that helps us develop APIs
+    b)Express gives us middleware functions such as .json() and .Router() --- this allows us to break up our app into routers, each having its own middleware
 
-- [ ] Describe Middleware?
+2.Describe Middleware.
+    a)Middleware is an array of functions that we can implement into our code and are executed in an assembly line fashion -- typically executed within our endpoints for crud operations
 
-- [ ] Describe a Resource?
+3.Describe a Resource.
+    a)Resource is a particular route or database of information that multiple endpoints are related to -- for example, there may be a User resource which takes multiple endpoints for retrieving the user information, creating a new user, editing user information and deleting a user and there may be a Post resource which takes multiple endpoints for creating a new post for that specific user etc
 
-- [ ] What can the API return to help clients know if a request was successful?
+4.What can the API return to help clients know if a request was successful?
+    a)HTTP status codes (specific codes are sent back determining on what was requested -- successful codes, client error codes for invalid information, server-side error codes etc
 
-- [ ] How can we partition our application into sub-applications?
+5.How can we partition our application into sub-applications?
+    a)We can use Express Routers to break up our endpoints for specific resources
 
 ## Minimum Viable Product
 
