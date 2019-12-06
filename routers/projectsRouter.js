@@ -104,8 +104,8 @@ router.put('/:id', validateProjectId, validateProject, (req, res) => {
     })
 });
 
-// -------------------- Custom Middleware ------------------------ //
 
+// -------------------- Custom Middleware ------------------------ //
 function validateProjectId(req, res, next) {
     const id = req.params.id;
       db.get(id) 

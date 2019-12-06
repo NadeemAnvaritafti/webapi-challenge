@@ -66,7 +66,6 @@ router.put('/:id', validateActionId, validateAction, (req, res) => {
 
 
 // -------------------- Custom Middleware ------------------------ //
-
 function validateActionId(req, res, next) {
     const id = req.params.id;
       db.get(id) 
@@ -82,7 +81,6 @@ function validateActionId(req, res, next) {
             console.log('error on GET /api/actions/:id', error);
             res.status(500).json({ error: 'The action information could not be retrieved.' })
         })
-      
 }
 
 function validateAction(req, res, next) {
